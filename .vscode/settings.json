@@ -15,5 +15,6 @@
       "xstddef": "c",
       "type_traits": "c",
       "utility": "c"
-    }
+    },
+    "python.pythonPath": "/usr/bin/python3"
 }
