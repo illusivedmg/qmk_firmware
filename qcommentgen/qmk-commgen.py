@@ -1,8 +1,8 @@
 import qmk_kc
-import re
+import re, sys
 
 comb=[]             #combined layer ready for output
-fill='──────┬'      #top fill lines 
+fill='──────┬'      #top fill lines
 fill2='──────┼'     #middle row fill lines
 fill3='──────┴'     #bottom fill lines
 laystart=False      #has the program found a layer start
@@ -16,7 +16,15 @@ layname=""
 notdef=[]
 ends=['','}']
 #open keymap file
-inpt=open('keymap.c','r')
+if len(sys.argv) > 1:
+    if sys.argv[1] == "-iw":
+        inpt=open('C:/qmk/keyboards/preonic/keymaps/illusive/keymap.c','r')
+    if sys.argv[1] == "-il":
+        inpt=open('../keyboards/preonic/keymaps/illusive/keymap.c','r')
+    else:
+        inpt=open(sys.argv[1],'r')
+else:
+    inpt=open('keymap.c','r')
 inpList=inpt.readlines()
 #add all lines of keymap to allin var and close
 inpt.close()
