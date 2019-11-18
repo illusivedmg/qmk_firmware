@@ -35,7 +35,6 @@ enum preonic_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-
 /* QWERTY
  * ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┐
  * │   `  │   1  │   2  │   3  │   4  │   5  │   6  │   7  │   8  │   9  │   0  │ Bksp │
@@ -74,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAK] = LAYOUT_preonic_grid( \
   KC_GRV,  KC_1,    KC_2,    KC_3,  KC_4,    KC_5,    KC_6,    KC_7,   KC_8,    KC_9,    KC_0,    KC_BSPC, \
   KC_TAB,  KC_Q,    KC_W,    KC_F,  KC_P,    KC_B,    KC_J,    KC_L,   KC_U,    KC_Y,    KC_SCLN, KC_DEL,  \
-  KC_ESC, KC_A,    KC_R,    KC_S,  KC_T,    KC_G,    KC_K,    KC_N,   KC_E,    KC_I,    KC_O,    KC_QUOT, \
+  KC_ESC,  KC_A,    KC_R,    KC_S,  KC_T,    KC_G,    KC_K,    KC_N,   KC_E,    KC_I,    KC_O,    KC_QUOT, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,  KC_D,    KC_V,    KC_M,    KC_H,   KC_COMM, KC_DOT,  KC_SLSH,   KC_ENT,  \
   KC_LCTL, BACKLIT, KC_LGUI, KC_LALT, RAISE, KC_SPC,  KC_SPC,  LOWER,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT  \
 ),
@@ -95,33 +94,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_RAISE] = LAYOUT_preonic_grid( \
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,  KC_F12, \
-  _______,  _______, _______, _______, _______, _______, _______, _______, _______,  KC_MINS, KC_EQL,  KC_PSCR,  \
-  _______,  _______, _______, _______, _______, _______, _______, KC_END,  KC_PGUP,  KC_LBRC, KC_RBRC, KC_BSLS, \
-  _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN,  _______, KC_MPRV, KC_MPLY, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE,  KC_VOLD, KC_VOLU, KC_MNXT \
+  _______, RGB_TOG, RGB_MOD, _______, RGB_MODE_PLAIN, _______, _______, _______, KC_PGUP,  KC_MINS, KC_EQL,  KC_PSCR,  \
+  _______, RGB_VAI, RGB_HUI, RGB_SAI, RGB_MODE_RAINBOW, _______, _______, _______, KC_PGDN,  KC_LBRC, KC_RBRC, KC_BSLS, \
+  _______, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______, _______, KC_MUTE, _______,  KC_HOME, KC_END, KC_MPLY, \
+  _______, _______, _______, _______, _______, _______, _______, _______, KC_MPRV,  KC_VOLD, KC_VOLU, KC_MNXT \
 ),
-
-
-/* LOWER
- * ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┐
- * │  F1  │  F2  │  F3  │  F4  │  F5  │  F6  │  F7  │  F8  │  F9  │  F10 │  F11 │  F12 │
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │      │      │      │      │  -   │  =   │PrtScn│
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │      │      │  End │ PgUp │  [   │  ]   │  \   │
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │      │      │ Home │ PgDn │      │ Prev │ Play │
- * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │      │      │      │ Mute │ Vol- │ Vol+ │ Next │
- * └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘
- */
 
 [_LOWER] = LAYOUT_preonic_grid( \
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,  KC_F12, \
-  _______, _______, _______, _______, _______, _______, _______, _______, _______,  KC_MINS, KC_EQL,  KC_PSCR,  \
-  _______, _______, _______, _______, _______, _______, _______, KC_END,  KC_PGUP,  KC_LBRC, KC_RBRC, KC_BSLS, \
-  _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN,  _______, KC_MPRV, KC_MPLY, \
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE,  KC_VOLD, KC_VOLU, KC_MNXT \
+  _______, RGB_TOG, RGB_MOD, _______, _______, _______, _______, _______, KC_PGUP,  KC_MINS, KC_EQL,  KC_PSCR,  \
+  _______, RGB_VAI, RGB_HUI, RGB_SAI, _______, _______, _______, _______, KC_PGDN,  KC_LBRC, KC_RBRC, KC_BSLS, \
+  _______, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______, _______, KC_MUTE, _______,  KC_HOME, KC_END,  KC_MPLY, \
+  _______, _______, _______, _______, _______, _______, _______, _______, KC_MPRV,  KC_VOLD, KC_VOLU, KC_MNXT \
 ),
 
 /* ADJUST
@@ -184,20 +168,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           return false;
           break;
         case BACKLIT:
-          if (record->event.pressed) {
-            register_code(KC_RSFT);
-            #ifdef BACKLIGHT_ENABLE
-              backlight_step();
-            #endif
-            #ifdef __AVR__
-            writePinLow(E6);
-            #endif
-          } else {
-            unregister_code(KC_RSFT);
-            #ifdef __AVR__
-            writePinHigh(E6);
-            #endif
-          }
+        //   if (record->event.pressed) {
+        //     register_code(KC_RSFT);
+        //     #ifdef RGBLIGHT_ENABLE
+        //       backlight_step();
+        //     #endif
+        //     #ifdef __AVR__
+        //     writePinLow(E6);
+        //     #endif
+        //   } else {
+        //     unregister_code(KC_RSFT);
+        //     #ifdef __AVR__
+        //     writePinHigh(E6);
+        //     #endif
+        //   }
           return false;
           break;
       }
@@ -285,3 +269,6 @@ bool music_mask_user(uint16_t keycode) {
       return true;
   }
 }
+
+const uint8_t RGBLED_BREATHING_INTERVALS[] PROGMEM = {255, 128, 64, 32};
+const uint8_t RGBLED_RAINBOW_MOOD_INTERVALS[] PROGMEM = {255, 128, 64};
