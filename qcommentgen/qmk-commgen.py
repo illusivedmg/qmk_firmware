@@ -20,7 +20,7 @@ if len(sys.argv) > 1:
     if sys.argv[1] == "-iw":
         inpt=open('C:/qmk/keyboards/preonic/keymaps/illusive/keymap.c','r')
     if sys.argv[1] == "-il":
-        inpt=open('../keyboards/preonic/keymaps/illusive/keymap.c','r')
+        inpt=open('/home/dmg/qmk_firmware/keyboards/preonic/keymaps/illusive/keymap.c','r')
     else:
         inpt=open(sys.argv[1],'r')
 else:
