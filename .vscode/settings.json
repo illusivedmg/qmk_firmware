@@ -9,6 +9,7 @@
         "**/*.bin": true
     },
     "files.associations": {
+<<<<<<< HEAD
         "*.h": "c",
         "*.c": "c",
         "*.inc": "c",
@@ -22,4 +23,15 @@
         "editor.trimAutoWhitespace": false,
         "files.trimTrailingWhitespace": false
     }
+=======
+      "*.h": "c",
+      "*.c": "c",
+      "*.cpp": "cpp",
+      "*.hpp": "cpp",
+      "xstddef": "c",
+      "type_traits": "c",
+      "utility": "c"
+    },
+    "python.pythonPath": "C:\\Users\\Donovan\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
+>>>>>>> 91807e14855d72bb2c429ba29f46eccc3438b17e
 }
